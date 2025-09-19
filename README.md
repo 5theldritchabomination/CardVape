@@ -1,9 +1,9 @@
 Bonjour, bienvenue sur le projet CardVape du WorkShop 2025 de l'epsi.
 
 Les détenteurs du projets sont:
-Thibault Royer
-Noa Rodriguez
-Vianney Haag
+Thibault Royer,
+Noa Rodriguez,
+Vianney Haag.
 
 Le projet permet actuellement de récupérer les UID de cartes RFID. Des modifications futures permetteront le copiages des cartes.
 
