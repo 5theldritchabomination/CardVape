@@ -4,12 +4,12 @@
 #include <PubSubClient.h>
 
 char ssid[] = "TP-Link_A05C";
-char pass[] = "EpsiWorkShop123&";
+char pass[] = "EpsiWorkShop123&";   //Connexion au Wi-Fi
 
 const char* mqttServer = "192.168.0.150"; // IP du broker Mosquitto
-int mqttPort = 1883;
+int mqttPort = 1883;                 // port du broker de base
 const char* mqttUser = "admin";      // si auth activée
-const char* mqttPassword = "memel";
+const char* mqttPassword = "memel";  //MDP du broker
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
@@ -23,7 +23,7 @@ void setup() {
 	Serial.begin(9600);		// Initialize serial communications with the PC
 		// Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
 	
-  //Wi-fi
+  // --- Wi-fi ---
   Serial.print("Connexion au Wi-Fi...") ;
   int status = WiFi.begin(ssid, pass); //inititalise la variable de status du wifi
   while (status != WL_CONNECTED) //WL_CONNECTED est une variable de la fonction Wifi.status()
@@ -35,7 +35,7 @@ void setup() {
   Serial.println("Wi-fi Connecté !");
   Serial.print("IP : "); Serial.println(WiFi.localIP());
 
-  //MQTT
+  // --- MQTT ---
   client.setServer(mqttServer, mqttPort);
   client.setCallback(mqttCallback);
 
@@ -90,12 +90,7 @@ void loop() {
   }
   client.loop();
   static unsigned long last = 0;
-  //String Car;
-  //for (int i = 0; i < strlen(uid); i++)
-  //{
-  //  Car+=(char)uid[i];
-  //}
-  client.publish("uid/topic", uid.c_str());
+  client.publish("uid/topic", uid.c_str()); //normalement le code prend uniquement un char en pur, l'insertion de la variable uid normalement string est convertie en Char par c_str de la librairie standard de C.
 }
 
   //=== Callback pour messages entrants ===
