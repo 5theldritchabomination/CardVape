@@ -6,6 +6,7 @@ Noa Rodriguez
 Vianney Haag
 
 Mentions légales:
+
 Le dispositif « Card-Vape » a été conçu dans un cadre strictement pédagogique et expérimental.
  Il ne doit être utilisé que pour :
 des travaux pratiques,
