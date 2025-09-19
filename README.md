@@ -5,8 +5,10 @@ Thibault Royer
 Noa Rodriguez
 Vianney Haag
 
-**Mentions légales:
-**
+Le projet permet actuellement de récupérer les UID de cartes RFID. Des modifications futures permetteront le copiages des cartes.
+
+**Mentions légales:**
+
 Le dispositif « Card-Vape » a été conçu dans un cadre strictement pédagogique et expérimental.
  Il ne doit être utilisé que pour :
 des travaux pratiques, des expérimentations personnelles à domicile, un usage purement privé et non commercial.
@@ -21,3 +23,7 @@ La spécification du MQTT est le dossier .conf
 L'extension à faire tourner en python (fonctionnel sur l'OS de base de raspberry Pi) est le fichier .py.
 
 Le fichier Json d'enregistrement est directement créé dans le répertoire du code python.
+
+
+Sources du code:
+Merci au code de démonstration d'arduino pour les paramétrages de bases 
